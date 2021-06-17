@@ -15,10 +15,18 @@
     "core-js": "^3.9.1",
     "firebase": "^8.6.7",
     "nuxt": "^2.15.3",
-    "firebase-admin": "^9.7.0"
+    "firebase-admin": "^9.7.0",
+    "vue-in-viewport-directive": "^2.0.2",
+    "vue-multiselect": "^2.1.6",
+    "vuelidate": "^0.7.6",
+    "swiper": "^6.3.5",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@nuxtjs/pwa": "^3.3.5",
-    "fibers": "^5.0.0"
+    "fibers": "^5.0.0",
+    "node-sass": "^6.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.2.0"
   }
 }
