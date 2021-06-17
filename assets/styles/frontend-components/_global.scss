@@ -1,0 +1,389 @@
+html {
+  box-sizing: border-box;
+  font-size: 17px;
+    @media screen and (max-width:991px){
+        font-size: 14px;
+    }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: $font-primary;
+    color: $color-white;
+    font-size: 17px;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    background-color: $color-black;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+
+    font-family: $font-primary;
+    font-weight: bold;
+}
+
+.r_container{
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width:1024px){
+    width: 100%;
+    max-width: 81%;
+  }
+
+  @media screen and (max-width:1024px){
+    width: 100%;
+    max-width: 90%;
+  }
+
+}
+
+
+.home_view{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 8vw 0;
+  &.bg_blue{
+    background-color: $color-primary;
+  }
+
+  &.bg_dark{
+    background-color: $color-dark;
+  }
+
+  &.no_padding{
+    padding: 0;
+  }
+
+  @media only screen and (max-width:1024px){
+    padding: 75px 0;
+  }
+}
+
+
+.section_title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.color_blue{
+    color: $color-primary;
+  }
+
+  &.center_{
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 0.25em;
+    position: relative;
+    display: block;
+    font-size: 3vw;
+
+    @media only screen and (max-width:1024px){
+      font-size: 40px;
+    }
+
+  }
+}
+
+.section_title{
+  transform-origin: top;
+  transform: translateY(50%);
+  transition: all 0.8s cubic-bezier(.33,1,.68,1);
+  opacity: 0;
+}
+
+.home_view {
+  &.dng-view-anim, &.in-viewport{
+    .section_title{
+      transform: none;
+      transition-delay: 0.8s;
+      opacity: 1;
+    }
+  }
+}
+
+.inner_page{
+  .section_title{
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.common_wrapper p{
+  transform-origin: top;
+  transform: translateY(50%);
+  transition: all 0.8s cubic-bezier(.33,1,.68,1);
+  opacity: 0;
+}
+
+.home_view {
+  &.dng-view-anim, &.in-viewport{
+    .common_wrapper p{
+      transform: none;
+      transition-delay: 1s;
+      opacity: 1;
+    }
+  }
+}
+
+
+.text_area{
+  position: relative;
+  display: block;
+
+  &.text_center{
+    text-align: center;
+  }
+
+  p{
+    margin: 0;
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 1.75em;
+
+    @media only screen and (max-width:1024px){
+      font-size: 16px;
+    }
+
+  }
+}
+
+
+.inner_page{
+  position: relative;
+  display: block;
+  padding-top: 12.5vw;
+  padding-bottom: 6.5vw;
+  min-height: 30vw;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('~assets/images/word.svg');
+    background-position: top;
+    background-size: 60% auto;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  @media only screen and (max-width:1024px){
+    padding-top: 150px;
+    padding-bottom: 75px;
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+.common_wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  p{
+    margin: 0;
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 0.25em;
+
+    @media only screen and (max-width:1024px){
+      font-size: 16px;
+    }
+
+  }
+}
+
+form{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.form_controller{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+
+  @media only screen and (max-width:767px){
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
+  }
+
+  .full_{
+    grid-column: 1/-1;
+  }
+
+  .form_box{
+    position: relative;
+    display: block;
+  }
+
+  input{
+    position: relative;
+    width: 100%;
+    border: 1px solid #161616;
+    outline: none;
+    height: 3.5em;
+    background-color: #161616;
+    color: $color-white;
+    font-weight: 500;
+    padding: 0 1em;
+    transition: all 0.3s ease;
+    border-radius: 0.5em;
+    &:focus{
+      border: 1px solid $color-primary;
+    }
+
+  }
+
+  textarea{
+    width: 100%;
+    position: relative;
+    border: 1px solid #161616;
+    background-color: #161616;
+    color: $color-white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border-radius: 0.5em;
+    outline: none;
+
+    &:focus{
+      border: 1px solid $color-primary;
+    }
+  }
+
+}
+
+::placeholder{
+  color: #494949;
+  font-size: 14px;
+  padding: 0 1em;
+  font-weight: 500;
+}
+
+.title_bar{
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #000;
+  border-radius: 1.5em;
+  padding: 1.5em;
+}
+
+.form_body_content{
+  position: relative;
+  width: 100%;
+  padding: 2em;
+  background: #272727;
+  border-radius: 1.5em;
+}
+
+
+.text_area_inner{
+  position: relative;
+  display: block;
+  width: 100%;
+
+  p,ul li{
+    font-size: 0.9vw;
+    line-height: 1.8;
+    @media only screen and (max-width:1024px){
+      font-size: 16px;
+    }
+  }
+
+  h4{
+    font-size: 1.2vw;
+    line-height: 1.8;
+    margin-top: 1em;
+    text-transform: uppercase;
+    @media only screen and (max-width:1024px){
+      font-size: 20px;
+    }
+  }
+
+  ul{
+    li{
+      position: relative;
+      padding-left: 25px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        transform: translateY(0.5vw);
+        border-radius: 2px;
+        background-color: #0A8AE9;
+
+        @media only screen and (max-width:1024px){
+          transform: translateY(8px);
+        }
+      }
+    }
+  }
+
+  ul li{
+    margin-bottom: 1.5em;
+    list-style: none;
+
+
+    &>strong{
+      font-weight: 600;
+      color: #0A8AE9;
+    }
+    p{
+      b{
+        font-weight: 600;
+        opacity: 0.8;
+      }
+    }
+
+  }
+}
+
+
+.multiselect__tags {
+  background: #161616 !important;
+  border: none !important;
+}
+
+.multiselect__input, .multiselect__single {
+  background: none !important;
+  color:#fff !important;
+  font-weight: 500 !important;
+}
+
+.multiselect, .multiselect__input, .multiselect__single{
+  font-size: 1vw !important;
+  @media only screen and (max-width:1200px){
+    font-size: 14px !important;
+  }
+}
