@@ -36,6 +36,28 @@ export default {
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
+
+    '@nuxtjs/pwa',
+    ['@nuxtjs/firebase', {
+      config: {
+        apiKey: 'AIzaSyDMkjSdCNGCldWgWWCdQPwat-mLAojcSdw',
+        authDomain: "pingo-rianair-2f72e.firebaseapp.com",
+        projectId: "pingo-rianair-2f72e",
+        storageBucket: "pingo-rianair-2f72e.appspot.com",
+        messagingSenderId: '273896716312',
+        appId: '1:273896716312:web:13cf68da448f23564ceb6d',
+        measurementId: 'G-6TV65CMWTB'
+      },
+      services: {
+        firestore: {
+          memoryOnly: false,
+          enablePersistence: true,
+        },
+        storage: true,
+        performance: false,
+        analytics: false,
+      },
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
