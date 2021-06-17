@@ -10,14 +10,15 @@
   export const actions = {
 
     nuxtServerInit({commit}, context) {
-      const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
-      return target2.get()
-      .then(res=> {
-        commit("fetchBanner", res.data());
-      }).catch( (e)=> {
-        console.log(e)
-      })
-      
+      // const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
+      // return target2.get()
+      // .then(res=> {
+      //   commit("fetchBanner", res.data());
+      // }).catch( (e)=> {
+      //   console.log(e)
+      // })
+
+      commit("fetchBanner", 'testing');
     },
 
   };

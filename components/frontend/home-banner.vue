@@ -8,13 +8,13 @@
     </div>
 
     <div class="banner_wrapper">
-      <div class="banner_content">
+      <!-- <div class="banner_content">
         <h1>
           <span>{{bannerContent.top}}</span>
           <span v-html="bannerContent.main"></span>
         </h1>
         <h3>{{bannerContent.sub}}</h3>
-      </div>
+      </div> -->
 
       <!-- <div class="widget_slide">
          <swiper ref="mySwiper" :options="swiperOptions" :slides-per-view="3">
