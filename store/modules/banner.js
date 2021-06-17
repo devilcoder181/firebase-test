@@ -10,8 +10,8 @@
   export const actions = {
 
     // Loading Contact Contents
-    fetch(vuexContext, context) {
-      const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
+    async nuxtServerInit(vuexContext, context) {
+      const target2 =  await this.$fire.firestore.collection('bannerContent').doc('bannerText')
       return target2.get()
       .then(res=> {
         vuexContext.commit("fetchBanner", res.data());
