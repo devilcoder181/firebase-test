@@ -16,7 +16,7 @@
         <h3>{{bannerContent.sub}}</h3>
       </div>
 
-      <div class="widget_slide">
+      <!-- <div class="widget_slide">
          <swiper ref="mySwiper" :options="swiperOptions" :slides-per-view="3">
             <swiper-slide v-for="(item, index) in testiContent" :key="index">
               <div class="widget_item">
@@ -32,7 +32,7 @@
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

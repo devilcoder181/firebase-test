@@ -1,7 +1,7 @@
 <template>
     <div class="default_view" :class="{visible: visibleClass}">
-        <!-- <r-banner></r-banner>
-        <r-about></r-about> -->
+        <r-banner></r-banner>
+        <!-- <r-about></r-about>  -->
     </div>
 </template>
 

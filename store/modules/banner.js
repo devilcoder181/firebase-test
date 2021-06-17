@@ -7,21 +7,21 @@
       state.bannerContent = value
     }
   };
-  // export const actions = {
+  export const actions = {
 
-  //   // Loading Contact Contents
-  //   nuxtServerInit(vuexContext, context) {
-  //     const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
-  //     return target2.get()
-  //     .then(res=> {
-  //       vuexContext.commit("fetchBanner", res.data());
-  //     }).catch( (e)=> {
-  //       console.log(e)
-  //     })
+    // Loading Contact Contents
+    nuxtServerInit(vuexContext, context) {
+      const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
+      return target2.get()
+      .then(res=> {
+        vuexContext.commit("fetchBanner", res.data());
+      }).catch( (e)=> {
+        console.log(e)
+      })
       
-  //   },
+    },
 
-  // };
+  };
   export const getters = {
     bannerContent(state) {
       return state.bannerContent;
