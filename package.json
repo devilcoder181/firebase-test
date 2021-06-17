@@ -11,7 +11,9 @@
   "dependencies": {
     "@chakra-ui/nuxt": "^0.3.0",
     "@nuxtjs/emotion": "^0.1.0",
+    "@nuxtjs/firebase": "^7.6.1",
     "core-js": "^3.9.1",
+    "firebase": "^8.6.7",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {}
