@@ -6,48 +6,48 @@ export const mutations = {
     state.seoContent = abtposts;
   }
 };
-export const actions = {
-  // Getting SEO Datas
+// export const actions = {
+//   // Getting SEO Datas
 
-  // Updating SEO Content
-  // Loading Contact Contents
-  nuxtServerInit(vuexContext, context) {
-    const target = this.$fire.firestore.collection('seo')
-    return target.get()
-      .then(res => {
-        let seoArray = []
+//   // Updating SEO Content
+//   // Loading Contact Contents
+//   nuxtServerInit(vuexContext, context) {
+//     const target = this.$fire.firestore.collection('seo')
+//     return target.get()
+//       .then(res => {
+//         let seoArray = []
 
-        res.forEach((doc) => {
+//         res.forEach((doc) => {
 
-          seoArray.push({
-            ...doc.data(),
-            id: doc.id
-          })
-        });
+//           seoArray.push({
+//             ...doc.data(),
+//             id: doc.id
+//           })
+//         });
 
-        const convertArrayToObject = (array, key) => {
-          const initialValue = {};
-          return array.reduce((obj, item) => {
-            return {
-              ...obj,
-              [item[key]]: item,
-            };
-          }, initialValue);
-        };
-
-
-        vuexContext.commit("setSeo", convertArrayToObject(seoArray, 'id'));
-
-        //console.log(assistanceArray)
+//         const convertArrayToObject = (array, key) => {
+//           const initialValue = {};
+//           return array.reduce((obj, item) => {
+//             return {
+//               ...obj,
+//               [item[key]]: item,
+//             };
+//           }, initialValue);
+//         };
 
 
-      }).catch((e) => {
-        console.log(e)
-      })
-  },
+//         vuexContext.commit("setSeo", convertArrayToObject(seoArray, 'id'));
+
+//         //console.log(assistanceArray)
 
 
-};
+//       }).catch((e) => {
+//         console.log(e)
+//       })
+//   },
+
+
+// };
 
 export const getters = {
   seoContent(state) {

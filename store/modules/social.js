@@ -9,21 +9,21 @@
     },
 
   };
-  export const actions = {
+  // export const actions = {
 
-    // Loading Contact Contents
-    nuxtServerInit(vuexContext, context) {
-      const target =  this.$fire.firestore.collection('socialContent').doc('socialData')
-      return target.get()
-      .then(res=> {
-        vuexContext.commit("setSocialContent", res.data());
-      }).catch( (e)=> {
-        console.log(e)
-      })
+  //   // Loading Contact Contents
+  //   nuxtServerInit(vuexContext, context) {
+  //     const target =  this.$fire.firestore.collection('socialContent').doc('socialData')
+  //     return target.get()
+  //     .then(res=> {
+  //       vuexContext.commit("setSocialContent", res.data());
+  //     }).catch( (e)=> {
+  //       console.log(e)
+  //     })
 
-    },
+  //   },
 
-  };
+  // };
   export const getters = {
     socialContent(state) {
       return state.socialContent;

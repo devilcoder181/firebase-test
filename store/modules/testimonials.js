@@ -7,30 +7,30 @@ export const mutations = {
     },
 
 };
-export const actions = {
+// export const actions = {
 
-    // Getting Data
-    nuxtServerInit(vuexContext, value) {
-        const target =  this.$fire.firestore.collection('testiContent')
-        return target.get()
-        .then(res=> {
-            let testiArray = []
+//     // Getting Data
+//     nuxtServerInit(vuexContext, value) {
+//         const target =  this.$fire.firestore.collection('testiContent')
+//         return target.get()
+//         .then(res=> {
+//             let testiArray = []
 
-            res.forEach((doc) => {
-              testiArray.push({...doc.data(), id:doc.id  })
-            });
+//             res.forEach((doc) => {
+//               testiArray.push({...doc.data(), id:doc.id  })
+//             });
 
-            vuexContext.commit("gettingTesti", testiArray);
+//             vuexContext.commit("gettingTesti", testiArray);
 
-            //console.log(testiArray)
+//             //console.log(testiArray)
 
 
-        }).catch( (e)=> {
-            console.log(e)
-        })
-    },
+//         }).catch( (e)=> {
+//             console.log(e)
+//         })
+//     },
 
-  };
+//   };
   export const getters = {
     testiContent(state) {
       return state.testiContent;
