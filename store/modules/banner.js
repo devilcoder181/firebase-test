@@ -17,8 +17,6 @@
       }).catch( (e)=> {
         console.log(e)
       })
-
-      commit("fetchBanner", 'testing');
     },
 
   };
