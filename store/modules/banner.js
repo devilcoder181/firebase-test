@@ -9,12 +9,11 @@
   };
   export const actions = {
 
-    // Loading Contact Contents
-    async asyncData(vuexContext, context) {
-      const target2 =  await this.$fire.firestore.collection('bannerContent').doc('bannerText')
+    nuxtServerInit({commit}, context) {
+      const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
       return target2.get()
       .then(res=> {
-        vuexContext.commit("fetchBanner", res.data());
+        commit("fetchBanner", res.data());
       }).catch( (e)=> {
         console.log(e)
       })
