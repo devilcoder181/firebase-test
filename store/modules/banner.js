@@ -10,7 +10,7 @@
   export const actions = {
 
     // Loading Contact Contents
-    async nuxtServerInit(vuexContext, context) {
+    async asyncData(vuexContext, context) {
       const target2 =  await this.$fire.firestore.collection('bannerContent').doc('bannerText')
       return target2.get()
       .then(res=> {
