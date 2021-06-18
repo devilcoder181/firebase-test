@@ -1,3 +1,4 @@
+import firebase from "firebase";
 
   export const state = () => ({
     bannerContent: []
@@ -10,7 +11,7 @@
   export const actions = {
 
     nuxtServerInit({commit}, context) {
-      const target2 =  this.$fire.firestore.collection('bannerContent').doc('bannerText')
+      const target2 =  firebase.firestore().collection('bannerContent').doc('bannerText')
       return target2.get()
       .then(res=> {
         commit("fetchBanner", res.data());
