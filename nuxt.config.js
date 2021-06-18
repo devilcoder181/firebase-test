@@ -49,14 +49,11 @@ export default {
       measurementId: process.env.FIRE_MESURID
     },
     services: {
-      firestore: {
-        memoryOnly: false,
-        enablePersistence: true,
-      },
-      storage: true,
-      performance: false,
-      analytics: false,
-    },
+      auth: false,
+      firestore: true,
+      functions: false,
+      storage: false
+    }
   },
   pwa: {
     workbox: {
