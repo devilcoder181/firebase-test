@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import {firestore} from "firestore"
 
   export const state = () => ({
     bannerContent: []
