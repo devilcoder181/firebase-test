@@ -81,6 +81,9 @@ export default {
   },
   directives: {
     swiper: directive
+  },
+  created() {
+    this.$store.dispatch("fetchUser").then(() => {})
   }
 }
 </script>
